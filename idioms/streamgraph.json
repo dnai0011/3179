@@ -1,0 +1,91 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/aria_salevalue.csv"
+  },
+  "transform": [{"calculate": "datum.value * 1000", "as": "value_millions"}],
+  "width": 800,
+  "height": 400,
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["format"],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": "area",
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "temporal",
+          "axis": {"format": "%Y", "title": "Year"}
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": "value",
+          "type": "quantitative",
+          "axis": null,
+          "stack": "center"
+        },
+        "color": {
+          "condition": {
+            "param": "hover",
+            "field": "format",
+            "title": "Format",
+            "type": "nominal",
+            "scale": {"scheme": "observable10"}
+          },
+          "value": "lightgrey"
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "temporal",
+            "format": "%Y",
+            "title": "Year"
+          },
+          {"field": "format", "type": "nominal", "title": "Format"},
+          {
+            "field": "value_millions",
+            "type": "quantitative",
+            "aggregate": "sum",
+            "title": "Sales Value",
+            "format": "$,"
+          }
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"year": "2012"}, {"year": "2020"}]},
+      "mark": {"type": "rule", "strokeDash": [5, 4]},
+      "encoding": {
+        "x": {"field": "year", "type": "temporal", "timeUnit": "year"},
+        "tooltip": [
+          {"field": "event", "type": "nominal", "title": "Event"},
+          {"field": "year", "type": "nominal", "title": "Year"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"year": "2012", "label": "2012: Spotify Launched in Australia"},
+          {"year": "2020", "label": "2020: Lockdown"}
+        ]
+      },
+      "mark": {"type": "text", "align": "left", "dx": 5},
+      "encoding": {
+        "x": {"field": "year", "type": "temporal", "timeUnit": "year"},
+        "y": {"value": 15},
+        "text": {"field": "label"}
+      }
+    }
+  ],
+  "config": {}
+}
