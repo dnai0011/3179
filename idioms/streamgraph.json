@@ -1,90 +1,83 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/aria_salevalue.csv"
-  },
-  "transform": [{"calculate": "datum.value * 1000", "as": "value_millions"}],
-  "width": 800,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 700,
   "height": 400,
-  "layer": [
+  "data": {
+    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/aria_values.csv"
+  },
+  "transform": [
+    {"calculate": "datum.value_thousands_aud / 1000", "as": "value_millions"},
     {
-      "params": [
-        {
-          "name": "hover",
-          "select": {
-            "type": "point",
-            "fields": ["format"],
-            "on": "pointerover",
-            "clear": "pointerout"
-          }
-        }
-      ],
-      "mark": "area",
-      "encoding": {
-        "x": {
-          "field": "year",
-          "type": "temporal",
-          "axis": {"format": "%Y", "title": "Year"}
-        },
-        "y": {
-          "aggregate": "sum",
-          "field": "value",
-          "type": "quantitative",
-          "axis": null,
-          "stack": "center"
-        },
-        "color": {
-          "condition": {
-            "param": "hover",
-            "field": "format",
-            "title": "Format",
-            "type": "nominal",
-            "scale": {"scheme": "observable10"}
-          },
-          "value": "lightgrey"
-        },
-        "tooltip": [
-          {
-            "field": "year",
-            "type": "temporal",
-            "format": "%Y",
-            "title": "Year"
-          },
-          {"field": "format", "type": "nominal", "title": "Format"},
-          {
-            "field": "value_millions",
-            "type": "quantitative",
-            "aggregate": "sum",
-            "title": "Sales Value",
-            "format": "$,"
-          }
-        ]
-      }
-    },
+      "calculate": "datum.category === 'Vinyl' ? 'z_Vinyl' : datum.category",
+      "as": "sort_order"
+    }
+  ],
+  "params": [
     {
-      "data": {"values": [{"year": "2012"}, {"year": "2020"}]},
-      "mark": {"type": "rule", "strokeDash": [5, 4]},
-      "encoding": {
-        "x": {"field": "year", "type": "temporal", "timeUnit": "year"},
-        "tooltip": [
-          {"field": "event", "type": "nominal", "title": "Event"},
-          {"field": "year", "type": "nominal", "title": "Year"}
-        ]
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {"year": "2012", "label": "2012: Spotify Launched in Australia"},
-          {"year": "2020", "label": "2020: Lockdown"}
-        ]
-      },
-      "mark": {"type": "text", "align": "left", "dx": 5},
-      "encoding": {
-        "x": {"field": "year", "type": "temporal", "timeUnit": "year"},
-        "y": {"value": 15},
-        "text": {"field": "label"}
+      "name": "hover",
+      "select": {
+        "type": "point",
+        "fields": ["category"],
+        "on": "pointerover",
+        "clear": "pointerout"
       }
     }
-  ]
+  ],
+  "mark": {"type": "area", "interpolate": "monotone"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "temporal",
+      "axis": {"format": "%Y", "tickCount": 10},
+      "title": "Year"
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "value_millions",
+      "type": "quantitative",
+      "stack": "center",
+      "axis": null,
+      "title": "Revenue (Millions AUD)"
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "legend": {"title": "Format"},
+      "scale": {
+        "domain": [
+          "Vinyl",
+          "CDs",
+          "Cassettes",
+          "Digital Downloads",
+          "Digital Other",
+          "Physical Other"
+        ],
+        "range": [
+          "#ff725c",
+          "#4269d0",
+          "#ff8ab7",
+          "#a463f2",
+          "#efb118",
+          "#3ca951"
+        ]
+      }
+    },
+    "order": {"field": "sort_order", "type": "nominal", "sort": "ascending"},
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.15},
+    "tooltip": [
+      {
+        "field": "year",
+        "type": "temporal",
+        "timeUnit": "year",
+        "title": "Year"
+      },
+      {"field": "category", "type": "nominal", "title": "Format"},
+      {
+        "field": "value_millions",
+        "type": "quantitative",
+        "title": "Revenue (Millions)",
+        "format": "$.2f"
+      }
+    ]
+  }
 }
