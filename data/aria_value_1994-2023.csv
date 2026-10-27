@@ -1,140 +1,181 @@
 year,category,value_thousands_aud
-1994,CDs,376068
-1994,Cassettes,70449
-1994,Vinyl,538
-1995,CDs,448792
-1995,Cassettes,50668
-1995,Vinyl,281
-1996,CDs,530597
-1996,Cassettes,37118
-1996,Vinyl,412
-1997,CDs,532235
-1997,Cassettes,21516
-1997,Physical Other,9675
-1997,Vinyl,448
-1998,CDs,543955
-1998,Cassettes,11293
-1998,Physical Other,11513
-1998,Vinyl,311
-1999,CDs,578367
-1999,Cassettes,6279
-1999,Physical Other,9162
-1999,Vinyl,460
-2000,CDs,576543
-2000,Cassettes,6063
-2000,Physical Other,10699
-2000,Vinyl,429
-2001,CDs,623143
-2001,Cassettes,4740
-2001,Physical Other,19273
-2001,Vinyl,464
-2002,CDs,565861
-2002,Cassettes,4317
-2002,Physical Other,38863
-2002,Vinyl,493
-2003,CDs,568118
-2003,Cassettes,1681
-2003,Physical Other,75580
-2003,Vinyl,623
-2004,CDs,536477
-2004,Cassettes,943
-2004,Physical Other,69104
-2004,Vinyl,446
-2005,CDs,465082
-2005,Cassettes,421
-2005,Digital Downloads,7140
-2005,Digital Other,767
-2005,Physical Other,54434
-2005,Vinyl,346
-2006,CDs,433943
-2006,Cassettes,181
-2006,Digital Downloads,25989
-2006,Digital Other,1868
-2006,Physical Other,49529
-2006,Vinyl,256
-2007,CDs,368773
-2007,Cassettes,54
-2007,Digital Downloads,35449
-2007,Digital Other,4515
-2007,Physical Other,53222
-2007,Vinyl,199
-2008,CDs,327370
-2008,Digital Downloads,48486
-2008,Digital Other,5704
-2008,Physical Other,43686
-2008,Vinyl,392
-2009,CDs,322214
-2009,Digital Downloads,66686
-2009,Digital Other,12558
-2009,Physical Other,43604
-2009,Vinyl,1050
-2010,CDs,252907
-2010,Digital Downloads,93229
-2010,Digital Other,11330
-2010,Physical Other,25741
-2010,Vinyl,809
-2011,CDs,222849
-2011,Digital Downloads,129320
-2011,Digital Other,11221
-2011,Physical Other,18429
-2011,Vinyl,903
-2012,CDs,194188
-2012,Digital Downloads,164463
-2012,Digital Other,19840
-2012,Physical Other,17791
-2012,Vinyl,1852
-2013,CDs,142106
-2013,Digital Downloads,164372
-2013,Digital Other,27890
-2013,Physical Other,14411
-2013,Vinyl,2840
-2014,CDs,115963
-2014,Digital Downloads,153894
-2014,Digital Other,33829
-2014,Physical Other,7658
-2014,Vinyl,6446
-2015,CDs,110895
-2015,Digital Downloads,133941
-2015,Digital Other,73654
-2015,Physical Other,6433
-2015,Vinyl,8911
-2016,CDs,87663
-2016,Digital Downloads,104813
-2016,Digital Other,141147
-2016,Physical Other,5128
-2016,Vinyl,15160
-2017,CDs,75041
-2017,Digital Downloads,77706
-2017,Digital Other,216803
-2017,Physical Other,3354
-2017,Vinyl,18111
-2018,CDs,51154
-2018,Digital Downloads,51531
-2018,Digital Other,284973
-2018,Physical Other,2353
-2018,Vinyl,20861
-2019,CDs,35556
-2019,Digital Downloads,34315
-2019,Digital Other,347444
-2019,Physical Other,2129
-2019,Vinyl,21389
-2020,CDs,29400
-2020,Digital Downloads,25758
-2020,Digital Other,391883
-2020,Physical Other,1690
-2020,Vinyl,28218
-2021,CDs,24151
-2021,Digital Downloads,18237
-2021,Digital Other,440752
-2021,Physical Other,1256
-2021,Vinyl,28802
-2022,CDs,19598
-2022,Digital Downloads,15018
-2022,Digital Other,468895
-2022,Physical Other,836
-2022,Vinyl,35462
-2023,CDs,16452
-2023,Digital Downloads,12843
-2023,Digital Other,514335
-2023,Physical Other,612
-2023,Vinyl,40447
+1994,CDs,376068.0
+1994,Cassettes,70449.0
+1994,Digital Downloads,0.0
+1994,Digital Other,0.0
+1994,Physical Other,0.0
+1994,Vinyl,538.0
+1995,CDs,448792.0
+1995,Cassettes,50668.0
+1995,Digital Downloads,0.0
+1995,Digital Other,0.0
+1995,Physical Other,0.0
+1995,Vinyl,281.0
+1996,CDs,530597.0
+1996,Cassettes,37118.0
+1996,Digital Downloads,0.0
+1996,Digital Other,0.0
+1996,Physical Other,0.0
+1996,Vinyl,412.0
+1997,CDs,532235.0
+1997,Cassettes,21516.0
+1997,Digital Downloads,0.0
+1997,Digital Other,0.0
+1997,Physical Other,9675.0
+1997,Vinyl,448.0
+1998,CDs,543955.0
+1998,Cassettes,11293.0
+1998,Digital Downloads,0.0
+1998,Digital Other,0.0
+1998,Physical Other,11513.0
+1998,Vinyl,311.0
+1999,CDs,578367.0
+1999,Cassettes,6279.0
+1999,Digital Downloads,0.0
+1999,Digital Other,0.0
+1999,Physical Other,9162.0
+1999,Vinyl,460.0
+2000,CDs,576543.0
+2000,Cassettes,6063.0
+2000,Digital Downloads,0.0
+2000,Digital Other,0.0
+2000,Physical Other,10699.0
+2000,Vinyl,429.0
+2001,CDs,623143.0
+2001,Cassettes,4740.0
+2001,Digital Downloads,0.0
+2001,Digital Other,0.0
+2001,Physical Other,19273.0
+2001,Vinyl,464.0
+2002,CDs,565861.0
+2002,Cassettes,4317.0
+2002,Digital Downloads,0.0
+2002,Digital Other,0.0
+2002,Physical Other,38863.0
+2002,Vinyl,493.0
+2003,CDs,568118.0
+2003,Cassettes,1681.0
+2003,Digital Downloads,0.0
+2003,Digital Other,0.0
+2003,Physical Other,75580.0
+2003,Vinyl,623.0
+2004,CDs,536477.0
+2004,Cassettes,943.0
+2004,Digital Downloads,0.0
+2004,Digital Other,0.0
+2004,Physical Other,69104.0
+2004,Vinyl,446.0
+2005,CDs,465082.0
+2005,Cassettes,421.0
+2005,Digital Downloads,7140.0
+2005,Digital Other,767.0
+2005,Physical Other,54434.0
+2005,Vinyl,346.0
+2006,CDs,433943.0
+2006,Cassettes,181.0
+2006,Digital Downloads,25989.0
+2006,Digital Other,1868.0
+2006,Physical Other,49529.0
+2006,Vinyl,256.0
+2007,CDs,368773.0
+2007,Cassettes,54.0
+2007,Digital Downloads,35449.0
+2007,Digital Other,4515.0
+2007,Physical Other,53222.0
+2007,Vinyl,199.0
+2008,CDs,327370.0
+2008,Cassettes,0.0
+2008,Digital Downloads,48486.0
+2008,Digital Other,5704.0
+2008,Physical Other,43686.0
+2008,Vinyl,392.0
+2009,CDs,322214.0
+2009,Cassettes,0.0
+2009,Digital Downloads,66686.0
+2009,Digital Other,12558.0
+2009,Physical Other,43604.0
+2009,Vinyl,1050.0
+2010,CDs,252907.0
+2010,Cassettes,0.0
+2010,Digital Downloads,93229.0
+2010,Digital Other,11330.0
+2010,Physical Other,25741.0
+2010,Vinyl,809.0
+2011,CDs,222849.0
+2011,Cassettes,0.0
+2011,Digital Downloads,129320.0
+2011,Digital Other,11221.0
+2011,Physical Other,18429.0
+2011,Vinyl,903.0
+2012,CDs,194188.0
+2012,Cassettes,0.0
+2012,Digital Downloads,164463.0
+2012,Digital Other,19840.0
+2012,Physical Other,17791.0
+2012,Vinyl,1852.0
+2013,CDs,142106.0
+2013,Cassettes,0.0
+2013,Digital Downloads,164372.0
+2013,Digital Other,27890.0
+2013,Physical Other,14411.0
+2013,Vinyl,2840.0
+2014,CDs,115963.0
+2014,Cassettes,0.0
+2014,Digital Downloads,153894.0
+2014,Digital Other,33829.0
+2014,Physical Other,7658.0
+2014,Vinyl,6446.0
+2015,CDs,110895.0
+2015,Cassettes,0.0
+2015,Digital Downloads,133941.0
+2015,Digital Other,73654.0
+2015,Physical Other,6433.0
+2015,Vinyl,8911.0
+2016,CDs,87663.0
+2016,Cassettes,0.0
+2016,Digital Downloads,104813.0
+2016,Digital Other,141147.0
+2016,Physical Other,5128.0
+2016,Vinyl,15160.0
+2017,CDs,75041.0
+2017,Cassettes,0.0
+2017,Digital Downloads,77706.0
+2017,Digital Other,216803.0
+2017,Physical Other,3354.0
+2017,Vinyl,18111.0
+2018,CDs,51154.0
+2018,Cassettes,0.0
+2018,Digital Downloads,51531.0
+2018,Digital Other,284973.0
+2018,Physical Other,2353.0
+2018,Vinyl,20861.0
+2019,CDs,35556.0
+2019,Cassettes,0.0
+2019,Digital Downloads,34315.0
+2019,Digital Other,347444.0
+2019,Physical Other,2129.0
+2019,Vinyl,21389.0
+2020,CDs,29400.0
+2020,Cassettes,0.0
+2020,Digital Downloads,25758.0
+2020,Digital Other,391883.0
+2020,Physical Other,1690.0
+2020,Vinyl,28218.0
+2021,CDs,24151.0
+2021,Cassettes,0.0
+2021,Digital Downloads,18237.0
+2021,Digital Other,440752.0
+2021,Physical Other,1256.0
+2021,Vinyl,28802.0
+2022,CDs,19598.0
+2022,Cassettes,0.0
+2022,Digital Downloads,15018.0
+2022,Digital Other,468895.0
+2022,Physical Other,836.0
+2022,Vinyl,35462.0
+2023,CDs,16452.0
+2023,Cassettes,0.0
+2023,Digital Downloads,12843.0
+2023,Digital Other,514335.0
+2023,Physical Other,612.0
+2023,Vinyl,40447.0
