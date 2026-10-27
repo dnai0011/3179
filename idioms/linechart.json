@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 720,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/aria_units.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": {"color": "#a463f2"},
+        "color": "#a463f2"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "axis": {"title": "Year", "format": "d"}
+        },
+        "y": {
+          "field": "sales_units_thousands",
+          "type": "quantitative",
+          "axis": {"title": "Sales Units (000s)", "format": "d"}
+        }
+      }
+    },
+    {
+      "data": {"values": [{"year": 2019, "label": "COVID-19 Pandemic"}]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -5,
+        "fontWeight": "bold",
+        "color": "#c53030"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"value": 15},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {"values": [{"year": 2019}]},
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "#c53030",
+        "strokeWidth": 1.5
+      },
+      "encoding": {"x": {"field": "year", "type": "quantitative"}}
+    }
+  ]
+}
