@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 320,
+  "height": 150,
+  "background": "#f8f5ee",
+  "data": {
+    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/discogs_7inch.csv"
+  },
+  "transform": [
+    {"calculate": "datum.row - 1", "as": "index"},
+    {"calculate": "datum.index % 5", "as": "col"},
+    {"calculate": "floor(datum.index / 5)", "as": "row_idx"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "col",
+      "type": "quantitative",
+      "axis": null,
+      "scale": {"domain": [-0.5, 4.5]}
+    },
+    "y": {
+      "field": "row_idx",
+      "type": "quantitative",
+      "axis": null,
+      "scale": {"domain": [-0.5, 1.5], "reverse": true}
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "size": 1800,
+        "filled": true,
+        "stroke": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {"value": "black"},
+        "tooltip": [
+          {"field": "artist", "title": "Artist"},
+          {"field": "title", "title": "Title"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 280, "filled": true},
+      "encoding": {
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": ["Pop Princess", "Jazz Artist", "Rock Band"],
+            "range": ["#a463f2", "#8c9296", "#8c9296"]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 45,
+        "filled": true,
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {"color": {"value": "black"}}
+    }
+  ]
+}
