@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 650,
+  "height": 400,
+  "background": "#f8f5ee",
+  "data": {
+    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/top_artists.csv"
+  },
+  "encoding": {
+    "y": {
+      "field": "artist",
+      "type": "nominal",
+      "sort": "-x",
+      "axis": {"title": ""}
+    },
+    "x": {
+      "field": "owned",
+      "type": "quantitative",
+      "axis": {
+        "title": "Number of Records in User Collections",
+        "titlePadding": 15,
+        "format": ".2s",
+        "tickCount": 10
+      }
+    }
+  },
+  "layer": [
+    {"mark": {"type": "rule", "strokeWidth": 5}},
+    {"mark": {"type": "circle", "size": 600, "color": "black", "opacity": 1}},
+    {"mark": {"type": "circle", "size": 160, "color": "#a463f2"}},
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -75,
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {"field": "owned", "type": "quantitative", "format": ","}
+      }
+    }
+  ]
+}
