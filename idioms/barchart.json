@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 450,
+  "height": 550,
+  "background": "#f8f5ee",
+  "data": {
+    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/discogs_genres.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.genre === 'Others' ? -1 : toNumber(datum.percentage)",
+      "as": "sort_value"
+    },
+    {"calculate": "toNumber(datum.percentage) + '%'", "as": "percentage_label"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "genre",
+      "type": "nominal",
+      "sort": {"field": "sort_value", "op": "max", "order": "descending"},
+      "axis": {"title": null, "labelAngle": -30},
+      "scale": {"paddingInner": 0.3}
+    },
+    "y": {"field": "percentage", "type": "quantitative", "axis": null}
+  },
+  "layer": [
+    {"mark": {"type": "bar", "color": "#a463f2"}},
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -5
+      },
+      "encoding": {"text": {"field": "percentage_label", "type": "nominal"}}
+    }
+  ]
+}
