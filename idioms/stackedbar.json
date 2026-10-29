@@ -1,0 +1,80 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 600,
+  "height": 400,
+  "background": "#f8f5ee",
+  "data": {
+    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/vinyl_records.csv"
+  },
+  "transform": [
+    {"filter": "datum.year >= 1950 && datum.year <= 2026"},
+    {"calculate": "floor(datum.year / 10) * 10 + 's'", "as": "decade"},
+    {
+      "calculate": "indexof(['Rock', 'Electronic', 'Pop', 'Jazz', 'Hip-Hop', 'Funk / Soul', 'Folk, World, & Country'], datum.genre) !== -1 ? datum.genre : 'Others'",
+      "as": "cleaned_genre"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "decade",
+      "title": null,
+      "type": "nominal",
+      "sort": [
+        "1950s",
+        "1960s",
+        "1970s",
+        "1980s",
+        "1990s",
+        "2000s",
+        "2010s",
+        "2020s"
+      ]
+    },
+    "x": {
+      "aggregate": "count",
+      "field": "releaseID",
+      "type": "quantitative",
+      "title": "Percentage of Releases",
+      "stack": "normalize",
+      "axis": {"format": "%"}
+    },
+    "color": {
+      "field": "cleaned_genre",
+      "type": "nominal",
+      "title": "Genre",
+      "sort": [
+        "Rock",
+        "Electronic",
+        "Pop",
+        "Jazz",
+        "Hip-Hop",
+        "Funk / Soul",
+        "Folk, World, & Country",
+        "Others"
+      ],
+      "scale": {
+        "domain": [
+          "Rock",
+          "Electronic",
+          "Pop",
+          "Jazz",
+          "Hip-Hop",
+          "Funk / Soul",
+          "Folk, World, & Country",
+          "Others"
+        ],
+        "range": [
+          "#e45756",
+          "#4c78a8",
+          "#f781bf",
+          "#eeca3b",
+          "#f58518",
+          "#b279a2",
+          "#72b7b2",
+          "#9ecae9"
+        ]
+      }
+    }
+  }
+}
