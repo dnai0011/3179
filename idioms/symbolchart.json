@@ -30,7 +30,7 @@
           "field": "genre",
           "scale": {
             "domain": ["Rock", "Funk & Soul"],
-            "range": ["#d62728", "#e7ba52"]
+            "range": ["#e45756", "#b279a2"]
           },
           "legend": null
         },
