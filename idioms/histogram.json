@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "#f8f5ee",
+  "data": {
+    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/vinyl_pricing.csv"
+  },
+  "transform": [{"filter": "datum.price <= 200"}],
+  "mark": {"type": "bar", "color": "#a463f2"},
+  "encoding": {
+    "x": {
+      "field": "price",
+      "type": "quantitative",
+      "bin": {"step": 10, "extent": [0, 200]},
+      "axis": {"title": "Lowest Price (USD)", "titlePadding": 10, "grid": false}
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "scale": {"type": "sqrt"},
+      "axis": {"title": "Number of Releases", "titlePadding": 10, "grid": false}
+    },
+    "tooltip": [
+      {
+        "field": "price",
+        "type": "quantitative",
+        "bin": {"step": 10, "extent": [0, 200]},
+        "title": "Price Range"
+      },
+      {"aggregate": "count", "type": "quantitative", "title": "Releases"}
+    ]
+  }
+}
