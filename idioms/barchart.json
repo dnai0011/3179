@@ -21,10 +21,37 @@
       "axis": {"title": null, "labelAngle": -30},
       "scale": {"paddingInner": 0.3}
     },
-    "y": {"field": "percentage", "type": "quantitative", "axis": null}
+    "y": {"field": "percentage", "type": "quantitative", "axis": null},
+    "color": {
+      "field": "genre",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Rock",
+          "Electronic",
+          "Pop",
+          "Funk & Soul",
+          "Jazz",
+          "Folk, World, & Country",
+          "Hip-Hop",
+          "Others"
+        ],
+        "range": [
+          "#d62728",
+          "#17becf",
+          "#e377c2",
+          "#e7ba52",
+          "#ce6dbd",
+          "#9ecae1",
+          "#6b6ecf",
+          "#f0007f"
+        ]
+      },
+      "legend": null
+    }
   },
   "layer": [
-    {"mark": {"type": "bar", "color": "#a463f2"}},
+    {"mark": {"type": "bar"}},
     {
       "mark": {
         "type": "text",
