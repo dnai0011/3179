@@ -1,0 +1,9 @@
+state_code,state_name,population,record_stores,stores_per_100k
+NSW,New South Wales,8593900,59,0.69
+VIC,Victoria,7074500,62,0.88
+QLD,Queensland,5669800,31,0.55
+SA,South Australia,1902300,15,0.79
+WA,Western Australia,3043700,17,0.56
+TAS,Tasmania,576000,2,0.35
+NT,Northern Territory,264400,1,0.38
+ACT,Australian Capital Territory,484800,3,0.62
