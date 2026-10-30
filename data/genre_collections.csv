@@ -1,8 +1,15 @@
-Genre,2016,2019
-Rock,462543,491626
-Electronic,244527,299494
-Pop,278028,329088
-Hip-Hop,56004,65920
-Jazz,116947,131973
-Funk & Soul,91467,96807
-"Folk, World, & Country",178160,230147
+Genre,Year,Releases
+Rock,2016,462543
+Pop,2016,278028
+Electronic,2016,244527
+"Folk, World, & Country",2016,178160
+Jazz,2016,116947
+Funk & Soul,2016,91467
+Hip-Hop,2016,56004
+Rock,2019,491626
+Pop,2019,329088
+Electronic,2019,299494
+"Folk, World, & Country",2019,230147
+Jazz,2019,131973
+Funk & Soul,2019,96807
+Hip-Hop,2019,65920
