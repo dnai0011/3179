@@ -1,7 +1,25 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 720,
+  "width": 780,
   "height": 400,
+  "background": "#f8f5ee",
+  "config": {
+    "font": "Inter",
+    "title": {
+      "color": "#871f78",
+      "fontSize": 25,
+      "anchor": "start",
+      "offset": 15,
+      "subtitleFontSize": 14,
+      "subtitleColor": "#4a5568",
+      "subtitlePadding": 10
+    },
+    "axis": {"titleFontSize": 15, "labelFontSize": 14}
+  },
+  "title": {
+    "text": "Australia's Vinyl Revival",
+    "subtitle": "Vinyl records sold in thousands"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/aria_units.csv"
   },
@@ -9,35 +27,43 @@
     {
       "mark": {
         "type": "line",
-        "point": {"color": "#a463f2"},
-        "color": "#a463f2"
+        "point": {"color": "#a463f2", "filled": true, "size": 60},
+        "color": "#a463f2",
+        "strokeWidth": 3
       },
       "encoding": {
         "x": {
           "field": "year",
           "type": "quantitative",
-          "axis": {"title": "Year", "format": "d"}
+          "axis": {"title": null, "format": "d", "grid": false}
         },
         "y": {
           "field": "sales_units_thousands",
           "type": "quantitative",
-          "axis": {"title": "Sales Units (000s)", "format": "d"}
+          "axis": {
+            "title": "Sales Units",
+            "format": "d",
+            "grid": true,
+            "gridColor": "#e2e8f0",
+            "gridDash": [2, 2]
+          }
         }
       }
     },
     {
-      "data": {"values": [{"year": 2019, "label": "COVID-19 Pandemic"}]},
+      "data": {"values": [{"year": 2019, "label": "COVID-19 pandemic"}]},
       "mark": {
         "type": "text",
         "align": "left",
         "dx": 8,
-        "dy": -5,
+        "dy": -20,
         "fontWeight": "bold",
-        "color": "#c53030"
+        "fontSize": 13,
+        "color": "#7c7c7c"
       },
       "encoding": {
         "x": {"field": "year", "type": "quantitative"},
-        "y": {"value": 15},
+        "y": {"value": 30},
         "text": {"field": "label"}
       }
     },
@@ -46,7 +72,34 @@
       "mark": {
         "type": "rule",
         "strokeDash": [4, 4],
-        "color": "#c53030",
+        "color": "#7c7c7c",
+        "strokeWidth": 1.5
+      },
+      "encoding": {"x": {"field": "year", "type": "quantitative"}}
+    },
+    {
+      "data": {"values": [{"year": 2012, "label": "Launching of Spotify"}]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -80,
+        "fontWeight": "bold",
+        "fontSize": 13,
+        "color": "#7c7c7c"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"value": 150},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {"values": [{"year": 2012}]},
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "#7c7c7c",
         "strokeWidth": 1.5
       },
       "encoding": {"x": {"field": "year", "type": "quantitative"}}
