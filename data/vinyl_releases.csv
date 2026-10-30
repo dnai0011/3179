@@ -1,65 +1,65 @@
-country,ReleaseCount
-United States of America,4840
-United Kingdom,3719
-Germany,1877
-Japan,666
-France,415
-Canada,365
-Netherlands,311
-Italy,267
-Belgium,149
-Spain,136
-Sweden,132
-Australia,127
-Switzerland,54
-Austria,46
-Brazil,41
-Russia,41
-Finland,39
-Poland,37
-Ireland,29
-Greece,27
-Portugal,27
-Denmark,25
-New Zealand,22
-Czech Republic,21
-Norway,16
-Argentina,15
-Hungary,15
-Jamaica,14
-Indonesia,11
-Lithuania,8
-Romania,8
-Iceland,6
-Israel,6
-Philippines,5
-South Africa,5
-Ukraine,5
-Mexico,7
-South Korea,4
-Turkey,4
-Bulgaria,3
-China,3
-Colombia,3
-Hong Kong,3
-Chile,2
-Estonia,2
-Slovakia,2
-Slovenia,13
-Taiwan,2
-Uruguay,2
-Zambia,2
-India,1
-Kazakhstan,1
-Luxembourg,1
-Macedonia,12
-Malaysia,1
-Mongolia,1
-Morocco,1
-Nicaragua,1
-North,1
-Peru,1
-Saudi Arabia,1
-Zimbabwe,1
-Thailand,1
-Venezuela,1
+country,ReleaseCount,latitude,longitude
+United States,4840,37.0902,-95.7129
+United Kingdom,3719,55.3781,-3.436
+Germany,1877,51.1657,10.4515
+Japan,666,36.2048,138.2529
+France,415,46.2276,2.2137
+Canada,365,56.1304,-106.3468
+Netherlands,311,52.1326,5.2913
+Italy,267,41.8719,12.5674
+Belgium,149,50.5039,4.4699
+Spain,136,40.4637,-3.7492
+Sweden,132,60.1282,18.6435
+Australia,127,-25.2744,133.7751
+Switzerland,54,46.8182,8.2275
+Austria,46,47.5162,14.5501
+Brazil,41,-14.235,-51.9253
+Russia,41,61.524,105.3188
+Finland,39,61.9241,25.7482
+Poland,37,51.9194,19.1451
+Ireland,29,53.4129,-8.2439
+Greece,27,39.0742,21.8243
+Portugal,27,39.3999,-8.2245
+Denmark,25,56.2639,9.5018
+New Zealand,22,-40.9006,174.886
+Czech Republic,21,49.8175,15.473
+Norway,16,60.472,8.4689
+Argentina,15,-38.4161,-63.6167
+Hungary,15,47.1625,19.5033
+Jamaica,14,18.1096,-77.2975
+Indonesia,11,-0.7893,113.9213
+Lithuania,8,55.1694,23.8813
+Romania,8,45.9432,24.9668
+Iceland,6,64.9631,-19.0208
+Israel,6,31.0461,34.8516
+Philippines,5,12.8797,121.774
+South Africa,5,-30.5595,22.9375
+Ukraine,5,48.3794,31.1656
+Mexico,7,23.6345,-102.5528
+South Korea,4,35.9078,127.7669
+Turkey,4,38.9637,35.2433
+Bulgaria,3,42.7339,25.4858
+China,3,35.8617,104.1954
+Colombia,3,4.5709,-74.2973
+Hong Kong,3,22.3193,114.1694
+Chile,2,-35.6751,-71.543
+Estonia,2,58.5953,25.0136
+Slovakia,2,48.669,19.699
+Slovenia,13,46.1512,14.9955
+Taiwan,2,23.6978,120.9605
+Uruguay,2,-32.5228,-55.7658
+Zambia,2,-13.1339,27.8493
+India,1,20.5937,78.9629
+Kazakhstan,1,48.0196,66.9237
+Luxembourg,1,49.8153,6.1296
+Macedonia,12,41.6086,21.7453
+Malaysia,1,4.2105,101.9758
+Mongolia,1,46.8625,103.8467
+Morocco,1,31.7917,-7.0926
+Nicaragua,1,12.8654,-85.2072
+North Korea,1,40.3399,127.5101
+Peru,1,-9.19,-75.0152
+Saudi Arabia,1,23.8859,45.0792
+Zimbabwe,1,-19.0154,29.1549
+Thailand,1,15.87,100.9925
+Venezuela,1,6.4238,-66.5897
