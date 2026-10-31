@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 330,
+  "height": 150,
+  "background": "#F8F4FC",
+  "config": {
+    "font": "Inter",
+    "view": {"stroke": null},
+    "title": {
+      "color": "#871f78",
+      "fontSize": 20,
+      "anchor": "start",
+      "offset": 15,
+      "subtitleFontSize": 14,
+      "subtitleColor": "#4a5568",
+      "subtitlePadding": 10
+    }
+  },
+  "title": {
+    "text": "The Rise of Pop Princesses",
+    "subtitle": "Top 5 Most Collected 7-inch in 2025"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/discogs_7inch.csv"
+  },
+
+  "transform": [
+    {"calculate": "datum.row - 1", "as": "index"},
+    {"calculate": "datum.index % 5", "as": "col"},
+    {"calculate": "floor(datum.index / 5)", "as": "row_idx"}
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "col",
+      "type": "quantitative",
+      "axis": null,
+      "scale": {
+        "domain": [-0.5, 4.5],
+        "nice": false
+      }
+    },
+    "y": {
+      "field": "row_idx",
+      "type": "quantitative",
+      "axis": null,
+      "scale": {
+        "domain": [-0.5, 1.5],
+        "reverse": true,
+        "nice": false
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "size": 1800,
+        "filled": true,
+        "stroke": "#171717",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {"value": "#171717"},
+        "tooltip": [
+          {
+            "field": "artist",
+            "type": "nominal",
+            "title": "Artist"
+          },
+          {
+            "field": "title",
+            "type": "nominal",
+            "title": "Record"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 280,
+        "filled": true
+      },
+      "encoding": {
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Pop Princess",
+              "Jazz Artist",
+              "Rock Band"
+            ],
+            "range": [
+              "#a463f2",
+              "#8c9296",
+              "#8c9296"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 45,
+        "filled": true,
+        "stroke": "#f8f5ee",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {"value": "#171717"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 500,
+  "height": 400,
+  "background": "#F8F4FC",
+  "config": {
+    "font": "Inter",
+    "title": {
+      "color": "#871f78",
+      "fontSize": 20,
+      "anchor": "start",
+      "offset": 15,
+      "subtitleFontSize": 14,
+      "subtitleColor": "#4a5568",
+      "subtitlePadding": 10
+    },
+    "axis": {
+      "titleFontSize": 15,
+      "labelFontSize": 14,
+      "labelColor": "#4a5568",
+      "titleColor": "#4a5568"
+    },
+    "legend": {
+      "titleFontSize": 14,
+      "labelFontSize": 12,
+      "titleColor": "#4a5568",
+      "labelColor": "#4a5568"
+    },
+    "view": {
+      "stroke": null
+    }
+  },
+  "title": {
+    "text": "Vinyl Record Store Density Across Australia",
+    "subtitle": "Independent Record Stores per 100,000 Residents by State & Territory, 2025"
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [135, -29],
+    "scale": 500
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "lookup": "properties.STATE_NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/australian_stores.csv"
+            },
+            "key": "state_name",
+            "fields": ["state_code", "population", "record_stores", "stores_per_100k"]
+          }
+        },
+        {
+          "filter": "isValid(datum.stores_per_100k)"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#6c757d",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "color": {
+          "field": "stores_per_100k",
+          "type": "quantitative",
+          "title": "Stores per 100k People",
+          "scale": {
+            "scheme": "purples"
+          },
+          "legend": {
+            "orient": "left",
+            "titleOrient": "top",
+            "direction": "vertical",
+            "offset": -110
+          }
+        },
+        "tooltip": [
+          {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
+          {"field": "record_stores", "type": "quantitative", "title": "Record Stores"},
+          {"field": "population", "type": "quantitative", "format": ",", "title": "Population"},
+          {"field": "stores_per_100k", "type": "quantitative", "format": ".2f", "title": "Stores per 100k"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"state": "Western Australia", "code": "WA", "lon": 122.0, "lat": -25.5},
+          {"state": "Northern Territory", "code": "NT", "lon": 133.5, "lat": -19.5},
+          {"state": "South Australia", "code": "SA", "lon": 135.0, "lat": -30.0},
+          {"state": "Queensland", "code": "QLD", "lon": 144.5, "lat": -22.5},
+          {"state": "New South Wales", "code": "NSW", "lon": 146.5, "lat": -32.0},
+          {"state": "Victoria", "code": "VIC", "lon": 143.5, "lat": -36.5},
+          {"state": "Tasmania", "code": "TAS", "lon": 146.5, "lat": -42.0},
+          {"state": "Australian Capital Territory", "code": "ACT", "lon": 149.1, "lat": -35.3}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "fill": "#000000",
+        "stroke": "#ffffff",
+        "strokeWidth": 0,
+        "strokeJoin": "round"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "code", "type": "nominal"}
+      }
+    }
+  ]
+}
