@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 590,
+  "height": 400,
+  "background": "#F8F4FC",
+  "config": {
+    "font": "Inter",
+    "title": {
+      "color": "#871f78",
+      "fontSize": 20,
+      "anchor": "start",
+      "offset": 15,
+      "subtitleFontSize": 14,
+      "subtitleColor": "#4a5568",
+      "subtitlePadding": 10
+    }
+  },
+  "title": {
+    "text": "Vinyl Record Stores Across Victoria",
+    "subtitle": "Distribution of Stores in Metropolitan Melbourne and Regional Victoria, 2025"
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [146, -36.8],
+    "scale": 2800
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.STATE_NAME == 'Victoria'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#d3d3d3",
+        "stroke": "#6c757d",
+        "strokeWidth": 1.2
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/victoria_stores.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "size": 60,
+        "opacity": 0.8,
+        "stroke": "#6e12dc",
+        "strokeWidth": 0.5,
+        "color": "#a463f2"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"city": "Melbourne", "lon": 144.9631, "lat": -37.8136}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "fill": "#000000",
+        "stroke": "#ffffff",
+        "strokeWidth": 0,
+        "strokeJoin": "round",
+        "dy": -12
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "city", "type": "nominal"}
+      }
+    }
+  ]
+}

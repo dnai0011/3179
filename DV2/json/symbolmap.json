@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 700,
+  "height": 450,
+  "background": "#F8F4FC",
+  "config": {
+    "font": "Inter",
+    "title": {
+      "color": "#871f78",
+      "fontSize": 20,
+      "anchor": "start",
+      "offset": 15,
+      "subtitleFontSize": 14,
+      "subtitleColor": "#4a5568",
+      "subtitlePadding": 10
+    },
+    "axis": {
+      "titleFontSize": 15,
+      "labelFontSize": 14,
+      "labelColor": "#4a5568",
+      "titleColor": "#4a5568"
+    },
+    "view": {
+      "stroke": null
+    }
+  },
+  "title": {
+    "text": "Vinyl Releases Added by Country",
+    "subtitle": "Global Distribution of Vinyls, 2018"
+  },
+  "projection": {
+    "type": "equalEarth"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#d3d3d3",
+        "stroke": "#6c757d",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dnai0011/3179/refs/heads/main/data/vinyl_releases.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.75,
+        "color": "#a463f2",
+        "stroke": "#6e12dc",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "release_count",
+          "type": "quantitative",
+          "title": "Total Releases",
+          "scale": {
+            "type": "sqrt",
+            "domain": [1, 400000],
+            "range": [30, 1400]
+          },
+          "legend": {
+            "orient": "left",
+            "values": [10000, 50000, 150000, 300000],
+            "titleFontSize": 13,
+            "labelFontSize": 13,
+            "offset": -60
+          }
+        },
+        "tooltip": [
+          {"field": "country", "type": "nominal", "title": "Country"},
+          {"field": "release_count", "type": "quantitative", "title": "Releases", "format": ","}
+        ]
+      }
+    }
+  ]
+}

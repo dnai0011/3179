@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Put Your Records On</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vega Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER / BANNER -->
+    <header class="banner">
+        <div class="banner-content">
+
+            <h1>Put Your Records On</h1>
+            <p class="banner-description">
+                Diving into the World of Vinyl Collectors.
+            </p>
+
+        </div>
+    </header>
+
+
+    <!-- SECTION 1 -->
+    <main>
+
+        <section class="dashboard-section">
+
+            <h2>1. The Evolution of Music Consumption</h2>
+
+            <div class="chart-container">
+
+                <div class="chart-card">
+
+    <!-- CHART -->
+    <div class="chart-visual">
+        <div id="vis-1"></div>
+        <p class="chart-source">
+        Source: ARIA (1994-2023)
+        </p>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="chart-description">
+        <h3>Music Evolves. Vinyl Endures.</h3>
+
+        <p> New technologies changed how people listened to music. </p>
+        <p> Music consumption shifted from physical ownership in 1990s, to instant access by early 2000s. </p>
+        <p> The vinyl craze has returned, retaining their appeal among collectors. </p>
+    </div>
+
+</div>
+
+
+                <div class="chart-card">
+
+    <!-- CHART -->
+    <div class="chart-visual">
+        <div id="vis-2"></div>
+        <p class="chart-source">
+        Source: ARIA (1994-2023)
+        </p>
+    </div>
+
+    <!-- DESCRIPTION -->
+    
+<div class="chart-description">
+
+    <h3 class="stat-number">29.4%</h3>
+
+    <p>Increase in Vinyl Sales (2019 - 2020).</p>
+
+    <h3 class="stat-number">305%</h3>
+
+    <p>Increase in Vinyl Sales since 2016.</p>
+
+    <p>Post-pandemic, the younger generations are driving demand for vinyls - seeking a disconnect from the era of digitalisation. </p>
+    <p></p>
+
+</div>
+
+
+</div>
+
+        </section>
+
+
+<!-- ============================= -->
+<!-- SECTION 2: FAN FAVOURITES     -->
+<!-- ============================= -->
+
+
+<!-- SECTION 2: FAN FAVOURITES -->
+
+<section class="dashboard-section">
+
+    <h2>2. Fan Favourites</h2>
+
+
+    <!-- TOP ROW -->
+    <div class="fan-top-row">
+
+        <!-- LOLLIPOP CHART -->
+        <div class="fan-chart-card">
+
+            <div id="vis-3" class="fan-chart-visual"></div>
+
+            <p class="chart-source">
+                Source: Mental Floss (2022)
+            </p>
+
+            <div class="fan-chart-description">
+
+                <h3>Some Artists are Simply Timeless Acts.</h3>
+
+                <p>Rock legends continue to rule collectors' shelves.</p>
+
+                <p>From The Beatles to Queen, these artists stand the test of time.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PICTOGRAM -->
+        <div class="fan-chart-card">
+
+            <div id="vis-4" class="fan-chart-visual"></div>
+
+            <p class="chart-source">
+                Source: Discogs (2025)
+            </p>
+
+            <div class="fan-chart-description">
+
+                <h3>The Classics are not the only favourites among collectors.</h3>
+
+                <p>Modern pop icons are also taking over.</p>
+
+                <h3 class="stat-number">8 out of 10</h3>
+
+                <p>Top spots belong to female pop artists.</p>
+
+                <p>Taylor Swift's 'Fortnight' holds the #1 spot for most collected 7-inch vinyls in 2025.</p>
+
+                <h3 class="stat-number">65,000</h3>
+
+                <p>Copies of 'Fortnight' sold in the U.S. alone.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MIDDLE ROW: BUMP CHART -->
+    <div class="fan-wide-card">
+
+        <div class="fan-wide-chart-group">
+
+            <div id="vis-5" class="fan-wide-visual"></div>
+
+            <p class="chart-source">
+                Source: Discogs (2017–2020)
+            </p>
+
+        </div>
+
+        <div class="fan-wide-description">
+
+            <h3>Nostalgic Records that are Still Spinning.</h3>
+
+            <p>Some tunes just never lose their shine.</p>
+
+            <p>Albums from the 60s, 70s and 80s dominate the Top 5.</p>
+
+            <p>The Dark Side of the Moon holds the crown for 4 consecutive years.</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM ROW: BAR CHART -->
+    <div class="fan-wide-card">
+
+        <div class="fan-wide-chart-group">
+
+            <div id="vis-6" class="fan-wide-visual"></div>
+
+            <p class="chart-source">
+                Source: Discogs (2023)
+            </p>
+
+        </div>
+
+        <div class="fan-wide-description">
+
+            <h3>The Crowd's Favourite Genre is Rock.</h3>
+
+            <p>Rock dominates collections at 53%.</p>
+
+            <p>That is <strong>more than twice</strong> as popular as Electronic at 22%.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- SECTION 3: BEYOND THE COLLECTION -->
+
+<section class="dashboard-section">
+
+    <h2>3. Beyond the Collection</h2>
+
+
+    <!-- TOP ROW: DONUT + SLOPE CHART -->
+    <div class="collection-top-row">
+
+        <!-- DONUT CHART -->
+        <div class="collection-chart-card">
+
+            <div class="collection-chart-group">
+
+                <div id="vis-8" class="collection-chart-visual"></div>
+
+                <p class="chart-source">
+                    Source: Discogs (2023)
+                </p>
+
+            </div>
+
+            <div class="collection-chart-description">
+
+                <h3>More Than Just Vinyls.</h3>
+
+                <p>Music enthusiasts are not just limited to collecting vinyls.</p>
+
+                <p>Formats like cassettes and DVDs make up a small portion of collections.</p>
+
+                <p>There will always be fanatics searching for these rare finds.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLOPE CHART -->
+        <div class="collection-chart-card">
+
+            <div class="collection-chart-group">
+
+                <div id="vis-9" class="collection-chart-visual"></div>
+
+                <p class="chart-source">
+                    Source: Discogs (2016–2019)
+                </p>
+
+            </div>
+
+            <div class="collection-chart-description">
+
+                <h3>The Variety of Music Genres.</h3>
+
+                <p>'Folk, World, & Country' genre had the <strong>biggest</strong> percentage increase in releases by 29.2%.</p>
+
+                <p>'Rock' remained the leading genre with nearly 500k releases in 2019, surpassing other genres.</p>
+
+                <p>However, it recorded one of the <strong>lowest growth rates</strong> at 6.3%.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM ROW: SYMBOL MAP -->
+    <div class="collection-wide-card">
+
+        <div class="collection-wide-chart-group">
+
+            <div id="vis-7" class="collection-wide-visual"></div>
+
+            <p class="chart-source">
+                Source: Discogs (2018)
+            </p>
+
+        </div>
+
+        <div class="collection-wide-description">
+
+            <h3>Around the Globe.</h3>
+
+            <p>Vinyl releases appear to cater predominantly to Western audiences.</p>
+
+            <p>Northern and Western Europe are the hotspots for vinyl releases.</p>
+
+            <p>These regions are major markets for record production and distribution.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================= -->
+<!-- SECTION 4: VINYLS OF AUSTRALIA -->
+<!-- ============================= -->
+
+
+<!-- SECTION 4: VINYLS OF AUSTRALIA -->
+
+<section class="dashboard-section">
+
+    <h2>4. The Vinyl Culture of Australia</h2>
+
+    <div class="australia-maps-row">
+
+        <!-- CHOROPLETH MAP -->
+        <div class="australia-map-card">
+
+            <div id="vis-10" class="australia-map-visual"></div>
+
+            <p class="chart-source">
+                Source: Victorian Music Development Office (2025)
+            </p>
+
+            <div class="australia-map-description">
+
+                <h3>Metropolitan States Lead the Vinyl Retail Landscape.</h3>
+
+                <p>Vinyl culture is getting popular among South-Eastern states, particularly Victoria and South Australia.</p>
+
+                <h3 class="stat-number">Nearly 50%</h3>
+
+                <p>of Australia's record stores are located in Victoria.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DOT MAP -->
+        <div class="australia-map-card">
+
+            <div id="vis-11" class="australia-map-visual"></div>
+
+            <p class="chart-source">
+                Source: Victorian Music Development Office (2025)
+            </p>
+
+            <div class="australia-map-description">
+
+                <h3>Melbourne, the Record Store Capital of the World.</h3>
+
+                <h3 class="stat-number">74%</h3>
+
+                <p>of record stores in Victoria are located in Metro Melbourne.</p>
+
+                <h3 class="stat-number">5.9</h3>
+
+                <p>Record stores per 100,000 residents, beating major cities like Berlin and Tokyo by <strong>more than double.</strong></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ============================= -->
+<!-- SECTION 5: CONCLUSION         -->
+<!-- ============================= -->
+
+<section class="dashboard-section conclusion-section">
+
+    <h2>5. Conclusion</h2>
+
+    <p class="section-intro">
+
+    </p>
+
+
+    <!-- THREE CONCLUSION CARDS -->
+
+    <div class="conclusion-grid">
+
+        <!-- CARD 1 -->
+
+        <div class="conclusion-card">
+
+            <h3>The Art Behind Vinyl Collecting.</h3>
+
+            <p>
+                To collectors, vinyls are more than just another way of listening to music.
+            </p>
+            <p>
+                It is about the nostalgia, connection, and appreciation for these physical records that makes it special.
+            </p>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="conclusion-card">
+
+            <h3>Music Transcends Borders.</h3>
+
+            <p>
+                There are no limits in the diverse music tastes of collectors around the world.
+            </p>
+            <p>
+                Favourite artists, albums, and genres can bring people together through their shared interests.
+            </p>
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="conclusion-card">
+
+            <h3>Timeless Appeal of Vinyls.</h3>
+
+            <p>
+                Despite the rise of digital music, vinyls are still going strong.
+            </p>
+            <p>
+                Its growing popularity among younger generations suggests that this hobby will continue to evolve rather than disappear.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================= -->
+<!-- DATA SOURCES & ABOUT ME       -->
+<!-- ============================= -->
+
+<section class="metadata-section">
+
+    <div class="metadata-content">
+
+        <h2>Data Sources</h2>
+
+        <div class="metadata-grid">
+
+            <!-- COLUMN 1 -->
+            <div class="metadata-item">
+
+                <h3>ARIA</h3>
+
+                <p>
+                    Australian music industry statistics, including
+                    music consumption and vinyl sales.
+                </p>
+
+                <p>
+                    <a href="https://www.aria.com.au/industry/statistics"
+                       target="_blank">
+                        ARIA Industry Statistics
+                    </a>
+                </p>
+
+                <h3>VMDO</h3>
+
+                <p>
+                    Information on Australia's record store landscape
+                    and vinyl retail industry.
+                </p>
+
+                <p>
+                    <a href="https://www.vmdo.com.au/for-the-record-2025"
+                       target="_blank">
+                        For the Record 2025
+                    </a>
+                </p>
+
+                <h3>Record Store Love</h3>
+
+                <p>
+                    Record store locations and listings used
+                    for the Australian record store maps.
+                </p>
+
+                <p>
+                    <a href="https://recordstorelove.com/"
+                       target="_blank">
+                        Record Store Love
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- COLUMN 2 -->
+            <div class="metadata-item">
+
+                <h3>Mental Floss</h3>
+
+                <p>
+                    Popular artists among vinyl collectors.
+                </p>
+
+                <p>
+                    <a href="https://www.mentalfloss.com/entertainment/music/most-popular-artists-on-vinyl"
+                       target="_blank">
+                        Most Popular Artists on Vinyl
+                    </a>
+                </p>
+
+                <h3>Discogs</h3>
+
+                <p>
+                    Global vinyl collecting statistics,
+                    collection formats and genre distributions.
+                </p>
+
+                <p>
+                    <a href="https://www.discogs.com/digs/collecting/750-million-records-in-global-collection/"
+                       target="_blank">
+                        750 Million Records in Global Collection
+                    </a>
+                </p>
+
+                <p>
+                    <a href="https://www.discogs.com/year-in-review/"
+                       target="_blank">
+                        Discogs Year in Review
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- COLUMN 3 -->
+            <div class="metadata-item">
+
+                <h3>Discogs Year-End Reports</h3>
+
+                <p>
+                    Historical data used for the proportional map
+                    and bump chart.
+                </p>
+
+                <p>
+                    <a href="https://blog.discogs.com/wp-content/uploads/2019/02/2018-year-end-report.pdf"
+                       target="_blank">
+                        2018 Year-End Report
+                    </a>
+                </p>
+
+                <p>
+                    <a href="https://blog.discogs.com/wp-content/uploads/2020/03/4538-DCG.YearEnd-19_Report.pdf"
+                       target="_blank">
+                        2019 Year-End Report
+                    </a>
+                </p>
+
+                <h3>State of Discogs</h3>
+
+                <p>
+                    Historical genre and album ranking data
+                    used for the slope and bump charts.
+                </p>
+
+                <p>
+                    <a href="https://blog.discogs.com/wp-content/uploads/2018/02/State-of-Discogs-2017.pdf"
+                       target="_blank">
+                        State of Discogs 2017
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ABOUT ME -->
+        <div class="about-me">
+
+            <p>
+                Created by Diyana Naim (35500476) for
+                FIT3179 Data Visualisation 2,
+                Monash University, October 2026.
+            </p>
+
+            <p>
+                AI Acknowledgement: Generative AI tools were used
+                to clean data files, create chart and HTML code,
+                and edit grammar.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+</main>
+
+<script src="vega_lite_vis.js"></script>
+
+</body>
+</html>
